@@ -13,15 +13,16 @@
 
 int potencia_de_i(int potencia) {
     int valores[4] = {49, 105, 49, 105};
+    int base = potencia;
 
     potencia %= 4;
 
     for (int i = 0; i < 4; i++) {
         if (potencia == i) {
             if (potencia == 2 || potencia == 3) {
-                printf("i^%d = -%c\n", potencia, valores[i]);
+                printf("i^%d = -%c\n", base, valores[i]);
             } else {
-                printf("i^%d = %c\n", potencia, valores[i]);
+                printf("i^%d = %c\n", base, valores[i]);
             }
             return 1;
         }
